@@ -49,7 +49,7 @@ pipeline {
 		//Code ends for stage Code Analysis
 */		
 	
-/*	
+	
 		//Code starts for stage Unit Test
         stage('Unit Test') {
             steps {
@@ -62,7 +62,7 @@ pipeline {
             }
         }
 		//Code ends for stage Unit Test
-*/
+
 		
 /*		
 		//Code starts for stage Code Coverage
