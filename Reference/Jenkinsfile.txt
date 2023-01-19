@@ -15,7 +15,7 @@ pipeline {
         }
 		//Code ends for stage Clean
 		
-		
+/*		
 		//Code starts for stage PMD
 		stage('PMD') {
             steps {
@@ -23,8 +23,9 @@ pipeline {
             }
         }
 		//Code ends for stage PMD
-		
-		
+*/		
+
+/*		
 		//Code starts for stage Compile
 		stage('Compile') {
             steps {
@@ -32,6 +33,7 @@ pipeline {
             }
         }
 		//Code ends for stage Compile
+*/
 		
 /*		
 		//Code starts for stage Code Analysis
@@ -49,7 +51,7 @@ pipeline {
 		//Code ends for stage Code Analysis
 */		
 	
-	
+/*	
 		//Code starts for stage Unit Test
         stage('Unit Test') {
             steps {
@@ -62,9 +64,9 @@ pipeline {
             }
         }
 		//Code ends for stage Unit Test
-
+*/
 		
-		
+/*		
 		//Code starts for stage Code Coverage
 		stage('Code Coverage') {
             steps {
@@ -72,7 +74,7 @@ pipeline {
             }
         }
 		//Code ends for stage Code Coverage
-		
+*/		
 		
 		//Code starts for stage Install
 		stage('Install') {
