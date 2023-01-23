@@ -15,7 +15,7 @@ pipeline {
         }
 		//Code ends for stage Clean
 		
-	
+/*	
 		//Code starts for stage PMD
 		stage('PMD') {
             steps {
@@ -75,7 +75,7 @@ pipeline {
         }
 		//Code ends for stage Code Coverage
 		
-		
+*/		
 		//Code starts for stage Install
 		stage('Install') {
             steps {
@@ -102,7 +102,7 @@ pipeline {
         }
 		//Code ends for stage Deploy War on Tomcat Server
 
-/*		
+		
 		//Code starts for stage API Test
 		stage('API Test') {
             steps {
@@ -112,7 +112,7 @@ pipeline {
             }
         }
 		//Code ends for stage API Test	
-*/		
+		
 		
 		//Code starts for stage System Test
 		stage('System Test') {
