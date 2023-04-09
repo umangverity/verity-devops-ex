@@ -6,7 +6,7 @@ pipeline {
 		// ******ALL CODE TO BE ADDED BELOW THIS COMMENT******
 		
 			
-/*			
+			
 		//Code starts for stage Clean
         stage('Clean') {
             steps {
@@ -16,13 +16,13 @@ pipeline {
 		//Code ends for stage Clean
 		
 
-		//Code starts for stage PMD
+/*		//Code starts for stage PMD
 		stage('PMD') {
             steps {
                 sh 'mvn site'
             }
         }
-		//Code ends for stage PMD
+*/		//Code ends for stage PMD
 		
 
 		
@@ -36,7 +36,7 @@ pipeline {
 
 		
 		
-		//Code starts for stage Code Analysis
+/*		//Code starts for stage Code Analysis
 		stage('Code Analysis') {
             steps {
 			 script {
@@ -48,11 +48,11 @@ pipeline {
 				}
 			}
 		}
-		//Code ends for stage Code Analysis
+*/		//Code ends for stage Code Analysis
 		
 	
 	
-		//Code starts for stage Unit Test
+/*		//Code starts for stage Unit Test
         stage('Unit Test') {
             steps {
                 sh 'mvn test'
@@ -73,7 +73,7 @@ pipeline {
                 sh 'mvn jacoco:report'
             }
         }
-		//Code ends for stage Code Coverage
+*/		//Code ends for stage Code Coverage
 		
 		
 		//Code starts for stage Install
@@ -122,7 +122,19 @@ pipeline {
             	sh 'mvn -Dtest=ExpenseManagerSystemTest test'
             }
         }
-		//Code ends for stage System Test	
+		//Code ends for stage System Test
+
+		
+		//Code starts for stage Cypress Test
+		stage('Cypress Test') {
+            		steps {
+				//Change git url below as per your forked github repository URL
+				git url: 'https://github.com/umangverity/EMSCypressTests.git'
+            	bat "npn i"
+				bat "npx cypress run"
+            }
+        }
+		//Code ends for stage Cypress Test	
 		
 		
 		//Code starts for stage BDD Test
@@ -134,7 +146,7 @@ pipeline {
             }
         }
 		//Code ends for stage BDD Test	
-*/		
+		
 		
 		
 		// ******ALL CODE TO BE ADDED ABOVE THIS COMMENT******
