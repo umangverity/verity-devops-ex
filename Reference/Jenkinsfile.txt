@@ -130,7 +130,7 @@ pipeline {
             		steps {
 				//Change git url below as per your forked github repository URL
 				git url: 'https://github.com/umangverity/EMSCypressTests.git'
-            	sh 'npn install cypress'
+            	sh 'npm install cypress'
 				sh 'npx cypress run'
             }
         }
