@@ -130,8 +130,8 @@ pipeline {
             		steps {
 				//Change git url below as per your forked github repository URL
 				git url: 'https://github.com/umangverity/EMSCypressTests.git'
-            	sh 'npm install cypress'
-				sh 'npx cypress run'
+            	bat label: 'Install NPM package',script: 'npm install'
+				bat label: 'Run test',script: 'npx cypress run'
             }
         }
 		//Code ends for stage Cypress Test	
